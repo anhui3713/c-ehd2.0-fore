@@ -1,5 +1,6 @@
 /* banner */
 .banner {height: 300px;background-image: url("../image/banner-background.png");}
+.banner ul,.banner ul li {height: 100%;}
 /* banner中的表单 */
 .banner .search-form {padding: 65px 0px;}
 /* 输入框样式设置 */
@@ -12,6 +13,11 @@
 .banner .search-form .btn-group .btn {border-radius: 0px;width: 45%;height: 34px;border: 1px solid #0889d6;color: #fff;background: rgba(255,255,255, 0);}
 .banner .search-form .btn-group .btn:hover {background: rgba(255,255,255, 0.2);}
 .banner .search-form .btn-group .btn:nth-child(1) {float: right;}
+
+.banner .banner-photo {background: url("../image/banner-phone.png") no-repeat center;}
+
+/* banner中的文字 */
+.banner .banner-text {font-size: 48px;color: #fff;margin: 0px auto; padding-top: 80px;letter-spacing: 15px;}
 
 /* 页面中的按钮(内容描述和合作伙伴) */
 .btn-bar::after {content: "";display: table;clear: both;}
