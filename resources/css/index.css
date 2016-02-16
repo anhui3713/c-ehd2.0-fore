@@ -1,5 +1,5 @@
 /* banner */
-.banner {height: 300px;background-image: url("../image/banner-background.png");}
+.banner {height: 300px;background-image: url("../image/index-banner-background.png");}
 .banner ul,.banner ul li {height: 100%;}
 /* banner中的表单 */
 .banner .search-form {padding: 65px 0px;}
@@ -14,7 +14,7 @@
 .banner .search-form .btn-group .btn:hover {background: rgba(255,255,255, 0.2);}
 .banner .search-form .btn-group .btn:nth-child(1) {float: right;}
 
-.banner .banner-photo {background: url("../image/banner-phone.png") no-repeat center;}
+.banner .banner-photo {background: url("../image/index-banner-phone.png") no-repeat center;}
 
 /* banner中的文字 */
 .banner .banner-text {font-size: 48px;color: #fff;margin: 0px auto; padding-top: 80px;letter-spacing: 15px;}
@@ -25,11 +25,12 @@
 
 /* 内容描述 */
 .description {background-color: #eeeeee;padding: 55px 50px 65px 70px !important;}
-.description > p {text-indent: 2em;line-height: 40px;letter-spacing: 4px;}
+.description > article {text-indent: 2em;line-height: 40px;letter-spacing: 4px;}
 
 /* 合作伙伴 */
 .friends {background-color: #fff;padding: 10px 0px 65px !important;}
 .friends ul li {text-align: center;padding: 20px 0px !important;}
+.friends .btn {border-radius: 0px;}
 
 /* 常见问题 */
 .questions {background-color: #fff;padding-bottom: 25px;}
@@ -37,7 +38,9 @@
 .questions .container > ul > li {padding: 2px 0px !important;}
 .questions ul ul a {color: #444;letter-spacing: 2px;line-height: 35px;}
 .questions .btn-bar .btn.btn-info.btn-lg {border-radius: 0px;}
+
 @media (max-width: 768px) {
-    .description{line-height: 30px;letter-spacing: 1px;padding: 35px 0px 35px 10px !important;}
+    .description{padding: 35px 0px 35px 10px !important;}
+    .description article {line-height: 30px;letter-spacing: 1px;}
     .questions ul ul a {color: #444;letter-spacing: 1px;line-height: 25px;}
 }

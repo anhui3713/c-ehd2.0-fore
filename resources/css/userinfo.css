@@ -1,0 +1,42 @@
+.content > section {margin-bottom: 32px;}
+
+.banner  {height: 208px;}
+.banner .image {height: 100%;background: url("../image/userinfo-banner.png") no-repeat center;}
+
+.main-content {margin-top: -8px;}
+
+.newusers {height: 395px;}
+.newusers li {line-height: 35px;padding-right: 60px;}
+.newusers li::after {display: table;content: "";clear: both;}
+.newusers li .info {float: left;}
+.newusers li .info i {margin: 0px 10px;}
+.newusers li .name {padding: 0px 10px;}
+.newusers li.personal .info i {color: #ff7d1e;}
+.newusers li.company .info i {color: #009fe4;}
+.newusers li .date {float: right;}
+
+.user-types {padding-top: 8px; padding-left: 15px; padding-right: 0px;}
+.user-types .panel {padding-left: 0px;padding-right: 0px;}
+.user-types .panel:last-child {margin-bottom: 0px;}
+.user-types .panel,.user-types .panel .panel-heading {border-radius: 0px; border: 0px;}
+.user-types .panel .panel-heading {padding-left: 23px;color: #fff;height: 35px;}
+.user-types .panel.panel-primary .panel-heading {background-color: #0889d6;}
+.user-types .panel.panel-warning .panel-heading {background-color: #ff9731;}
+.user-types article {text-indent: 2em;line-height: 25px;letter-spacing: 1px;}
+.user-types a {display: inline-block;margin-top: 12px;margin-left: 40px;}
+
+@media (max-width: 1200px) {
+    .newusers li {margin-left: -15px;padding-right: 10px;}
+    .newusers li .info i {margin: 0px 2px;}
+    .newusers li .name {padding: 0px 2px;}
+    .user-types article {letter-spacing: 0px;}
+}
+
+@media (max-width: 768px) {
+    body {min-width: 520px;}
+    .newusers li {padding-right: 60px;}
+    .newusers li .info i {margin: 0px 10px;}
+    .newusers li .name {padding: 0px 10px;}
+    .user-types {padding-left: 0px;padding-right: 0px;}
+}
+
