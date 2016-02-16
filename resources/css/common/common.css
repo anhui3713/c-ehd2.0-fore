@@ -1,0 +1,124 @@
+/* 全局字体设置 */
+body {padding-top: 75px;color: #444;font-size: 14px;font-family: 微软雅黑;background-color: #f8f8f8;}
+
+/* 全局列表清除自带样式 */
+ul {margin: 0px;padding: 0px;}
+ul li {list-style-type: none;}
+
+/* 设置所有section和ul清除浮动 */
+ul::after,section::after {display: table;content: "";clear: both;}
+
+/* 导航条边框背景阴影设置 */
+.navbar-default.navbar-cehd {border-radius: 0px;border-bottom: 1px solid #a3a3a3;background-color: #fff;box-shadow: 0px 0px 2px #aaa;}
+
+/* 导航条高度适配logo高度 */
+.navbar-cehd .navbar-brand {height: auto;padding: 0px;}
+.navbar-btn {margin-top: 2px;margin-bottom: 2px;}
+
+/* 默认显示小logo */
+.navbar-logo-img img.logo-md {display: block;}
+.navbar-logo-img img.logo-lg {display: none;}
+
+/* 默认最小尺寸不显示导航条 */
+.nav.navbar-nav {display: none;}
+.nav.navbar-nav.collapsing {display: block}
+.nav.navbar-nav.in {display: block;}
+
+/* 内容中的每块都带有25px的底部外边距 */
+.content > section {margin-bottom: 25px; padding-left: 15px;padding-right: 15px;}
+
+/* 底部设置 */
+footer {background-color: #0789d5;color: #eee;font-size: 12px;padding: 25px 0px;}
+/* 设置底部的li边距,强制改写bootstrap设置的col-*-*样式15px的内边距 */
+footer ul,footer ul li{padding: 2px 0px !important;}
+
+/* 底部链接设置 */
+footer .footer-links > li {position: relative;list-style-type: none;padding-top: 2px;padding-bottom: 2px;}
+footer .footer-links > li > a {color: #eee;}
+
+/* 底部水平线 */
+footer .hr {clear: both;padding: 10px 2px;}
+footer .hr > div {width: 100%;height: 1px;background-color: #eee;}
+
+/* 底部功能链接内容居中以及分隔竖线 */
+footer .footer-links-operation > li {text-align: center;}
+footer .footer-links-operation > li::after {position: absolute;right: 0px;bottom: 2px;content: "";width: 1px;height: 12px;background: #eee;}
+footer .footer-links-operation > li:last-child::after,footer .footer-links-operation > li:nth-child(3)::after,footer .footer-links-operation > li:nth-child(6)::after {width: 0px;}
+
+/* 媒体查询: 当页面宽度为sm以上(大于768px)时的样式设置 */
+@media(min-width: 768px) {
+    /* 设置页面内边距,将内容显示到浮动导航条以下 */
+    body {padding-top: 75px;}
+
+    /* 导航条宽度自适应 */
+    .navbar-header {width: auto;}
+
+    /* 显示md尺寸的logo */
+    .navbar-logo-img img.logo-md {display: block;}
+    .navbar-logo-img img.logo-lg {display: none;}
+
+    /* 隐藏展开按钮 */
+    .navbar-btn {display: none;}
+    /* 显示导航条 */
+    .nav.navbar-nav {display: block;}
+
+    /* 文字连接置底 */
+    .nav.navbar-nav {height: auto;margin-top: 10px; float: right;}
+    .nav.navbar-nav > li > a {position: relative;padding:15px 10px 5px;}
+
+    /* 纠正bootstrap设置导航的样式 */
+    .nav.navbar-nav > li > a,.nav.navbar-nav > li.active > a,.nav.navbar-nav > li > a:hover,.nav.navbar-nav > li.active > a:hover {background-color: #fff;}
+    .nav.navbar-nav > li.active > a,.nav.navbar-nav > li > a:hover {text-decoration: underline;}
+
+    /* 导航条分隔竖线 */
+    .nav.navbar-nav > li > a::after {position: absolute;right: 0px;bottom: 7px;content: "";width: 1px;height: 12px;background: #444;}
+    .nav.navbar-nav > li:last-child > a::after {width: 0px;}
+}
+
+/* 媒体查询: 当页面宽度为md以上(大于992px)时的样式设置 */
+@media(min-width: 992px) {
+    /* 设置页面内边距,将内容显示到浮动导航条以下 */
+    body {padding-top: 89px;}
+
+    /* 显示lg尺寸的logo */
+    .navbar-logo-img img.logo-md {display: none;}
+    .navbar-logo-img img.logo-lg {display: block;}
+    .nav.navbar-nav > li > a {position: relative;padding:15px 15px 5px;}
+
+    /* 文字连接置底 logo变大,文字上边距需要增加 */
+    .nav.navbar-nav {margin-top: 24px;}
+
+    /* 页脚分隔竖线调整 */
+    footer .footer-links-operation > li:last-child::after,footer .footer-links-operation > li:nth-child(3)::after,footer .footer-links-operation > li:nth-child(6)::after {width: 1px;}
+    footer .footer-links-operation > li:last-child::after,footer .footer-links-operation > li:nth-child(4)::after {width: 0px;}
+}
+
+/* 媒体查询: 当页面宽度为lg以上(大于1200px)时的样式设置 */
+@media (min-width: 1200px) {
+    .nav.navbar-nav > li > a {position: relative;padding:15px 20px 5px;}
+}
+
+/* 书签控件 面板阴影,左内边距70px, 最小高度110px*/
+.panel-bookmark {position: relative;background-color: #fff;box-shadow:0px 0px 2px #777;padding-left: 70px;margin-top: 20px;min-height: 120px;}
+/* 书签中的元素绝对定位 */
+.panel-bookmark .bookmark,.panel-bookmark .bookmark::after,.panel-bookmark .bookmark i,.panel-bookmark .bookmark i::before,.panel-bookmark .bookmark i::after {position: absolute;z-index: 1;}
+/* 书签控件 定位,样式设置 */
+.panel-bookmark .bookmark {display: inline-block;color: #fff;width: 44px;font-size: 14px;left: 10px;top: -8px;padding: 12px 15px 30px;box-sizing: border-box;}
+/* 书签折叠效果控制 */
+.panel-bookmark .bookmark i {display: block;height: 7px;width: 56px;top: 0px;left: -6px;overflow: hidden;}
+.panel-bookmark .bookmark i::before {content: "";width: 44px;height: 44px;top: -13px;left: 6px;transform: rotate(45deg);}
+.panel-bookmark .bookmark i::after {content: "";width: 44px;height: 7px;top: 0px;left: 6px;z-index: 2;}
+/* 书签底部凹角 */
+.panel-bookmark .bookmark::after {content: "";width: 24px;height: 24px;background-color: #fff;bottom: -24px;transform: translate(-19px, -12px) rotate(-45deg) skew(15deg, 15deg);border-bottom-left-radius: 100%;}
+/* 主要书签样式: 蓝色 */
+.panel-bookmark .bookmark.bookmark-primary {background-color: #0789d5;}
+.panel-bookmark .bookmark.bookmark-primary i::before {background-color: #0879bd;}
+.panel-bookmark .bookmark.bookmark-primary i::after {background-color: #0789d5;}
+/* 警告书签样式: 黄色 */
+.panel-bookmark .bookmark.bookmark-warning {background-color: #ff9831;}
+.panel-bookmark .bookmark.bookmark-warning i::before {background-color: #a62aa0;}
+.panel-bookmark .bookmark.bookmark-warning i::after {background-color: #ff9831;}
+/* 危险书签样式: 红色 */
+.panel-bookmark .bookmark.bookmark-danger {background-color: #ff5432;}
+.panel-bookmark .bookmark.bookmark-danger i::before {background-color: #a62d12;}
+.panel-bookmark .bookmark.bookmark-danger i::after {background-color: #ff5432;}
